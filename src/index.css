@@ -1,0 +1,165 @@
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+  background-color: #030615;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  display: relative;
+}
+.imgContainer{
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
+}
+.bgImage{
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+footer div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+
+footer h2{
+  font-size: 1.6rem;
+}
+footer h1{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer button{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  size: 10px;
+  transition: 200ms;
+  cursor: pointer;
+  padding: 1rem;
+}
+footer button i{
+  font-size: 2rem;
+}
+footer button:hover{
+  opacity: 0.4;
+}
+
+.bgGradient{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top,#030615, rgba(255,255,255,0));
+}
+.sidebar{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+ .bgOverlay{
+  position: absolute;
+  inset: 0;
+  background: #030615;
+  opacity: 0.4;
+}
+  
+.sidebarContents{
+  z-index: 15;
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 95%;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  background: #030615;
+  overflow-y: scroll;
+}  
+.sidebarContents div{
+  flex: 1;
+}
+.sidebarContents h2{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.date{
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+.description{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+}
+
+.sidebarContents button{
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: auto;
+  transition-duration: 200ms;
+  font-size: 1.3rem;
+}
+.loadingState{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.loadingState i{
+  opacity: 0.5;
+  font-size: 3rem;
+}
+
+@media (min-width:640px){
+  .sidebar{
+    position: relative;
+    inset: unset;
+    min-width: 30%;
+    box-shadow: 0 0 40 1 #030615;
+  }
+  .sidebarContents{
+    margin: unset;
+  }
+}
+
+
